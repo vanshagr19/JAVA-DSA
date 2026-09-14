@@ -43,16 +43,54 @@ class Linkedlist{
         tail.next =null;
     }
 
-    boolean search(int x){
+    void insert(int idx ,int val){
         Node temp =head;
-        if (temp == null){
-            return false;
+        if (idx > getsize() || idx<0){
+            System.out.println("Invalid index");
+            return ;
+        }
+        if (idx == 0) addathead(val);
+        else if (idx ==getsize()) addattail(val);
+        else{
+            
+            for (int i = 1; i < idx ; i++){
+                temp=temp.next;
+            }
+            Node newnode =new Node(val);
+            newnode.next = temp.next;
+            temp.next = newnode;
+        }
+
+    }
+
+    int  search(int x){
+        Node temp = head;
+        int idx = 0;
+        if (head == null){
+            return -1;
         }
         while (temp != null) {
-            if (temp.val == x) return true;
+            if (temp.val == x) {
+                return idx;
+            }
             temp = temp.next;
+            idx ++;
         }
-        return false;
+        return -1;
+    }
+
+    int getsize( ){
+        Node temp =head;
+        int size =0;
+         if (head == null){
+            return 0;
+        }
+        while(temp != null){
+            size++;
+            temp= temp.next;
+        }
+        return size;
+        
     }
 
     void display(){
@@ -65,7 +103,7 @@ class Linkedlist{
             temp= temp.next;
         }
         System.out.println("\n");
-        }
+    }
         
     
 };
@@ -80,12 +118,15 @@ public class LinkedDS {
     ll.addathead(12);
     ll.addathead(13);
     ll.addathead(14);
-    ll.display();
+    
     ll.deleteathead();
-    // ll.deleteattail();
-    System.out.println(ll.search(15));
-
     ll.display();
-        
+    // ll.deleteattail();
+    // System.out.println(ll.search(13));
+
+    
+    // System.out.println(ll.getsize() ) ;  
+    ll.insert(2,40);
+    ll.display();
     }
 }
