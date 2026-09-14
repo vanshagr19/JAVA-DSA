@@ -17,12 +17,21 @@ class Linkedlist{
 
     void addathead(int x){
         Node newnode = new Node(x);
-        Node temp = head;
         if (head == null){
             head = tail = newnode;
         }
         newnode.next = head;
         head = newnode;
+    }
+
+    void deleteathead(){
+        if (head == null){
+            System.out.println("no node for deletion");
+        }
+        head = head.next;
+        if (head == tail){
+            tail= head;
+        }
     }
 
     void display(){
@@ -44,6 +53,7 @@ public class LinkedDS {
     ll.addattail(10);
 
     ll.addathead(12);
+    ll.deleteathead();
     ll.display();
         
     }
