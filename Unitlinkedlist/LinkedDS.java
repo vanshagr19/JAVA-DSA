@@ -63,6 +63,19 @@ class Linkedlist{
 
     }
 
+     void delete(int idx){
+        Node temp = head;
+        if (idx<0 ||idx > getsize())  {
+            System.out.println("Invalid index");
+        }
+
+        for ( int i = 0;i<idx-1 ; i++){
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+        
+    }
+
     int  search(int x){
         Node temp = head;
         int idx = 0;
@@ -78,6 +91,8 @@ class Linkedlist{
         }
         return -1;
     }
+
+   
 
     int getsize( ){
         Node temp =head;
