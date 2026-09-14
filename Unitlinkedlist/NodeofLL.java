@@ -20,7 +20,7 @@ public class NodeofLL {
     a.next = b;
     b.next =c ;
     c.next =d;
-// TEST CHANGE 
+
     }
 
 }
