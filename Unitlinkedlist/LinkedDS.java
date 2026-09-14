@@ -15,6 +15,16 @@ class Linkedlist{
         } 
     }
 
+    void addathead(int x){
+        Node newnode = new Node(x);
+        Node temp = head;
+        if (head == null){
+            head = tail = newnode;
+        }
+        newnode.next = head;
+        head = newnode;
+    }
+
     void display(){
         Node temp =head;
         while(temp != null){
@@ -32,6 +42,8 @@ public class LinkedDS {
     
     Linkedlist ll =new Linkedlist();
     ll.addattail(10);
+
+    ll.addathead(12);
     ll.display();
         
     }
