@@ -14,5 +14,7 @@ public class PassingstringToMethod {
 
         change(s);
         System.out.println(s);
+
+        // value of s doesnot change 
     }
 }
