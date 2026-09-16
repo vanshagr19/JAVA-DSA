@@ -14,10 +14,10 @@ public class BuiltinMethods {
 
         // System.out.println(s.contains("Harshit"));
 
-        // System.out.println(s.startsWith("Harsh"));
+        System.out.println(s.startsWith("Harsh"));
         // System.out.println(s.endsWith("Harsh"));
 
-        System.out.println(s1.compareTo(s2));
+        // System.out.println(s1.compareTo(s2));
 
     }
 }
