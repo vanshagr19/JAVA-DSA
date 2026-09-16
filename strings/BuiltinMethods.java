@@ -3,8 +3,8 @@ package strings;
 public class BuiltinMethods {
     
     public static void main(String[] args) {
-        String s2 = "harshita";
-        String s1 = "vansh";
+        // String s2 = "harshita";
+        String s = "vansh";
 
         // System.out.println(s.indexOf('a'));
         // System.out.println(s.lastIndexOf('a'));
