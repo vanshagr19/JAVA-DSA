@@ -19,6 +19,7 @@ public class StringReverse {
 
         s.deleteCharAt(3);
         s.insert(3, 's');
+        s.delete(1, 5); // delete 3 to 4
         System.out.println(s);
     }
 
