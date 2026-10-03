@@ -7,7 +7,7 @@ public class StringReverse {
 
         // s.reverse();
 
-        int i = 0, j = s.length() - 1;
+        // int i = 0, j = s.length() - 1;
         // while(i<=j){
         // char t1 = s.charAt(i);
         // char t2 = s.charAt(j);
