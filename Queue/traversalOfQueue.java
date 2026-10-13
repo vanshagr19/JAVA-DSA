@@ -70,9 +70,9 @@ public class traversalOfQueue {
         q.add(50);
         q.add(60);
 
-        // pushAtIndex(q, 40, 10);
+        pushAtIndex(q, 40, 10);
 
-        // System.out.println(peekAtIndex(q, 3));
+        System.out.println(peekAtIndex(q, 3));
         System.out.println(removeAtIndex(q, 5));
         display(q);
     }
