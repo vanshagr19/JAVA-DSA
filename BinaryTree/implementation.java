@@ -27,6 +27,18 @@ public class implementation {
         return size(root.left) + size(root.right) + 1;
     }
 
+    private static int product(Node root) {
+        if (root == null)
+            return 1;
+        return product(root.left) * product(root.right) * root.val;
+    }
+
+    private static int sum(Node root) {
+        if (root == null)
+            return 0;
+        return sum(root.left) + sum(root.right) + root.val;
+    }
+
     public static void main(String[] args) {
         Node a = new Node(6);
         Node b = new Node(4);
@@ -39,10 +51,12 @@ public class implementation {
         a.left = b;
         a.right = c;
         b.left = d;
-        // b.right = e;
-        // c.left = f;
+        b.right = e;
+        c.left = f;
         c.right = g;
         System.out.println(size(a));
+        System.out.println(product(a));
+        System.out.println(sum(a));
         display(a);
 
     }
