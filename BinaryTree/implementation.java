@@ -39,6 +39,12 @@ public class implementation {
         return sum(root.left) + sum(root.right) + root.val;
     }
 
+    private static int max(Node root) {
+        if (root == null)
+            return Integer.MIN_VALUE;
+        return Math.max(max(root.left), Math.max(max(root.right), root.val));
+    }
+
     public static void main(String[] args) {
         Node a = new Node(6);
         Node b = new Node(4);
@@ -54,9 +60,10 @@ public class implementation {
         b.right = e;
         c.left = f;
         c.right = g;
-        System.out.println(size(a));
-        System.out.println(product(a));
-        System.out.println(sum(a));
+        // System.out.println(size(a));
+        // System.out.println(product(a));
+        // System.out.println(sum(a));
+        System.out.println(max(a));
         display(a);
 
     }
